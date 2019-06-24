@@ -1,0 +1,105 @@
+//to reset element-ui default css
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+//暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+//element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+body .el-table th.gutter{
+  display: table-cell!important;
+}
+
+
+@import './variables.scss';
+
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+// input
+$--input-focus-border: $mainColor !default;
+
+$--select-input-color: $mainColor !default;
+$--select-multiple-input-color: $mainColor !default;
+$--select-input-focus-background: $mainColor !default;
+
+// button
+$--button-primary-fill: $mainColor !default;
+$--button-primary-border: $mainColor !default;
+
+$--button-default-color: $mainColor !default;
+$--button-default-fill: #fff !default;
+$--button-default-border: $mainColor !default;
+.el-button.el-button--default{
+  &:hover, &:focus{
+    color: $mainColor;
+    border-color: $shallowMainColor;
+    background-color: $shallowMainBgColor;
+  }
+}
+$--button-default-hover-color: $mainColor !default;
+
+// switch
+$--switch-on-color: $mainColor !default;
+.el-switch .el-switch__label.is-active{
+  color: $mainColor;
+}
+
+// pagination
+$--pagination-hover-fill: $mainColor !default;
+.el-pagination.is-background .el-pager li.number{
+  &:not(.disabled).active{
+    background-color: $mainColor;
+  }
+}
+
+// tab
+.el-tabs.el-tabs--card .el-tabs__header{
+  border-bottom-color: $mainColor;
+  .el-tabs__nav-wrap .el-tabs__nav-scroll .el-tabs__nav{
+    border-color: $mainColor;
+    .el-tabs__item{
+      border-left-color: $mainColor;
+      &:hover{
+        color: $mainColor;
+      }
+      &.is-active{
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+// radio
+$--radio-button-checked-fill: $mainColor !default;
+$--radio-button-checked-border-color: $mainColor !default;
+.el-radio-button:not(.is-focus):not(.is-active):not(.is-disabled){
+  .el-radio-button__inner:hover{
+    color: $mainColor;
+  }
+}
+
+
+@import "~element-ui/packages/theme-chalk/src/index";

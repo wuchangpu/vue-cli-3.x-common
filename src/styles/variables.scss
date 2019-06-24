@@ -1,0 +1,10 @@
+$mainColor:#409EFF;
+$shallowMainColor: #66B1FF;
+$shallowMainBgColor: #f5f5de;
+
+// the :export directive is the magic sauce for webpack
+:export {
+  mainColor: $mainColor;
+  shallowMainColor: $shallowMainColor;
+  shallowMainBgColor: $shallowMainBgColor;
+}
