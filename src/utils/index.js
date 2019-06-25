@@ -8,7 +8,7 @@ import {
 import deepCopy from './deepCopy'
 
 
-function install(Vue, options) {
+function install(Vue) {
   // 全局正则
   Vue.prototype.$reg = {
     phone: /^1[3-9]\d{9}$/,
@@ -52,7 +52,7 @@ function install(Vue, options) {
   Vue.directive('keyBoard', {
     inserted: function(el) {
       const oHeight = document.body.clientHeight
-      window.addEventListener('resize', function(params) {
+      window.addEventListener('resize', function() {
         if (oHeight > document.body.clientHeight) { // 键盘弹出
           el.scrollIntoView(false)
         }
