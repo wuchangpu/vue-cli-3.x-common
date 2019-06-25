@@ -1,6 +1,4 @@
 module.exports = {
-  // 指定解析器
-  parse: '',
   // 指定解析器选项
   parserOptions: {
     parser: 'babel-eslint'
